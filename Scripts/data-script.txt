@@ -1,0 +1,40 @@
+Insert into ACCOUNT (SSN,F_NAME,L_NAME,B_DATE,NATIONALITY,PASSWORD,PHONE,GENDER) values (11111,'Hosam','Sosan',to_timestamp('24-AUG-91','DD-MON-RR HH.MI.SSXFF AM'),'Syrian','hosam','011','Male');
+Insert into ACCOUNT (SSN,F_NAME,L_NAME,B_DATE,NATIONALITY,PASSWORD,PHONE,GENDER) values (22222,'Ahmad','Shaarawy',to_timestamp('05-MAY-97','DD-MON-RR HH.MI.SSXFF AM'),'Egyptian','ahmad','012','Male');
+Insert into ACCOUNT (SSN,F_NAME,L_NAME,B_DATE,NATIONALITY,PASSWORD,PHONE,GENDER) values (33333,'Abanob','Amin',to_timestamp('15-APR-95','DD-MON-RR HH.MI.SSXFF AM'),'Egyptian','abanob','010','Male');
+Insert into ACCOUNT (SSN,F_NAME,L_NAME,B_DATE,NATIONALITY,PASSWORD,PHONE,GENDER) values (44444,'Khalid','Said',to_timestamp('02-FEB-93','DD-MON-RR HH.MI.SSXFF AM'),'British','khalid','090','Male');
+Insert into ACCOUNT (SSN,F_NAME,L_NAME,B_DATE,NATIONALITY,PASSWORD,PHONE,GENDER) values (55555,'Hosin','Ata',to_timestamp('15-FEB-90','DD-MON-RR HH.MI.SSXFF AM'),'Frensh','hosin','080','Male');
+
+Insert into ADMIN (SSN,SALARY) values (11111,5000);
+
+Insert into CUSTOMER (SSN,CREDIT_CARD_NUM,REGISTERATION_DATE,PASSPORT_NUM) values (22222,11112222,to_timestamp('07-APR-18','DD-MON-RR HH.MI.SSXFF AM'),'00990088');
+Insert into CUSTOMER (SSN,CREDIT_CARD_NUM,REGISTERATION_DATE,PASSPORT_NUM) values (33333,22221111,to_timestamp('07-APR-18','DD-MON-RR HH.MI.SSXFF AM'),'00770088');
+
+Insert into WORKER (SSN,TYPE,SALARY,"S-DATE",AIRPLAINID) values (44444,'Captin','5000',to_timestamp('01-JAN-18','DD-MON-RR HH.MI.SS.FF AM'),5);
+Insert into WORKER (SSN,TYPE,SALARY,"S-DATE",AIRPLAINID) values (55555,'Engineer','5000',to_timestamp('01-JAN-18','DD-MON-RR HH.MI.SS.FF AM'),5);
+
+Insert into AIRLINE (AIRLINEID,AIRLINENAME,COUNTRY) values (1,'Afriqiyah','Lybia');
+Insert into AIRLINE (AIRLINEID,AIRLINENAME,COUNTRY) values (2,'Air Algerie','Algerie');
+Insert into AIRLINE (AIRLINEID,AIRLINENAME,COUNTRY) values (3,'Air France','France');
+Insert into AIRLINE (AIRLINEID,AIRLINENAME,COUNTRY) values (4,'British Airways','Britain');
+Insert into AIRLINE (AIRLINEID,AIRLINENAME,COUNTRY) values (5,'EgyptAir ','Egypt');
+Insert into AIRLINE (AIRLINEID,AIRLINENAME,COUNTRY) values (6,'Emirates ','UAE');
+Insert into AIRLINE (AIRLINEID,AIRLINENAME,COUNTRY) values (7,'Etihad Airways','UAE');
+Insert into AIRLINE (AIRLINEID,AIRLINENAME,COUNTRY) values (8,'Iraqi Airways','Iraq');
+Insert into AIRLINE (AIRLINEID,AIRLINENAME,COUNTRY) values (9,'KLM ','Holland');
+Insert into AIRLINE (AIRLINEID,AIRLINENAME,COUNTRY) values (10,'Kuwait Airways','Kuwait');
+Insert into AIRLINE (AIRLINEID,AIRLINENAME,COUNTRY) values (11,'Lufthansa','Germany');
+Insert into AIRLINE (AIRLINEID,AIRLINENAME,COUNTRY) values (12,'Middle East','Lebanon');
+Insert into AIRLINE (AIRLINEID,AIRLINENAME,COUNTRY) values (13,'Olympic Air','Greece');
+Insert into AIRLINE (AIRLINEID,AIRLINENAME,COUNTRY) values (14,'Royal Jordanian','Jordan');
+
+Insert into FLIGHT (FLIGHT_ID, ARRIVAL_TIME, ARRIVAL_AIRPORT, "DATE", NUMBER_OF_SEATS, DEPARTURE_TIME, DEPARTURE_AIRPORT, ADMIN_SSN, AIRLINEID) VALUES ('1', '14', 'Milan', TO_DATE('20-APR-18', 'DD-MON-RR'), '10', '11', 'Cairo', '11111', '5');
+
+Insert into RESERVATION (RESERVATION_ID,RESERVATION_DATE,CUSTOMER_ID,FLIGHTID) values (1,to_timestamp('12-APR-18','DD-MON-RR HH.MI.SS.FF AM'),22222,1);
+
+Insert into SEAT (SEAT_NUM,AVAILABILITY,RESERVATION_ID,FLIGHTID,COST) values (1,'N',1,1,100);
+Insert into SEAT (SEAT_NUM,AVAILABILITY,RESERVATION_ID,FLIGHTID,COST) values (2,'Y',0,1,50);
+
+Insert into WORKER_FLIGHT (SSN,FLIGHTID) values (44444,1);
+Insert into WORKER_FLIGHT (SSN,FLIGHTID) values (55555,1);
+
+commit;
